@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fonte-titulo:"Playfair Display", serif;
+    --fonte-paragrafo:"Source Sans 3", sans-serif;
+    --cor-linkedin:#0177b5;
+}
+body{
+    position: relative;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    background-color: black;
+    height: 60px;
+    
+    color: white;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 40;
+    width: 100%;
+}
+header h2{
+    font-family: var(--fonte-titulo);
+    font-size: 26px;
+}
+header nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+header nav a{
+    color: white;
+    font-family: var(--fonte-paragrafo);
+    text-decoration: none;
+    font-size: 18px;
+}
+header nav a .linkedin{
+    height: 30px;
+    width: 30px; 
+    background-color: var(--cor-linkedin);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px
+}
+.banner{
+    margin-top: 60px;
+    height: 449.422px;
+    width: 100%;
+    background-image: url(backgroundimage.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+.banner a{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: var(--fonte-paragrafo);
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    background-color: rgba(0, 0, 0, 0.34);
+    padding: 3px 7px;
+}
+.banner .perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.banner .perfil img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.banner .perfil h1{
+    color: white;
+    font-family: var(--fonte-titulo);
+    font-size: 54px;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+    justify-content: center;
+    padding-top: 70px;
+    width: 92%;
+    margin: 0 auto;
+}
+main .video{
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+    color: black;
+}
+main .video:hover{
+    transition: .3s;
+    transform: translateY(-12px);
+
+}
+main .video .thumbnail{
+    height: 304px;
+    width: 100%;
+}
+main .video .thumb1{
+    background-image: url(thumb1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main .video .thumb2{
+    background-image: url(thumb2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main .video .thumb3{
+    background-image: url(thumb3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+main .video .thumb4{
+    background-image: url(thumb4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.video .thumbnail a{
+    width: 100%!important;
+    height: 100%!important;
+}
+main .video .thumbnail img{
+    width: 100%;
+    height: 100%;
+}
+main .video .textarea{
+    text-decoration: none;
+}
+main .video .textarea span{
+    font-family: var(--fonte-paragrafo);
+    font-size: 12.6px;
+    line-height: 13.86px;
+    color: rgba(0, 0, 0, 0.697);
+    text-decoration: none!important;
+}
+main .video .textarea h4{
+    font-size: 22px;
+    padding: 6px 0;
+    text-decoration: none;
+} 
+main .video .textarea p{
+    font-size: 14.4px;
+    line-height: 21.6px;
+    font-family: var(--fonte-paragrafo);
+} 
+main .video .textarea {
+    border: 1px solid rgba(0, 0, 0, 0.179);
+    padding: 20px;
+    height: 200px;
+    
+
+} 
+footer{
+    background-color: black;
+    height: 282.219px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .creatorarea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+
+}
+footer .creatorarea h2{
+    color: white;
+    font-family: var(--fonte-titulo);
+    font-size: 40px;
+}
+footer .creatorarea .redes a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 2px 2px;  
+
+}
+footer a{
+    color: white;
+}
+footer .creatorarea p{
+    font-family: var(--fonte-paragrafo);
+    color: white;
+    
+
+}
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 1355px) {
+   main{
+    grid-template-columns: repeat(2,1fr);
+   }
+
+}
+@media only screen and (max-width: 788px) {
+    main{
+     grid-template-columns: repeat(1,1fr);
+    }
+    header h2, header .nav a{
+        font-size: 15px;
+    }
+ 
+ }
